@@ -19,6 +19,7 @@ export const createScoreTable = async(req,res)=>{
         res.status(500).json(error)
     }
 }
+
 export const getAllScoreDatas = async(req,res)=>{
 try {
     const data = await pool.query('SELECT * FROM scroes')
