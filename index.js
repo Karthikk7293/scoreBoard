@@ -3,10 +3,12 @@ config()
 import express from 'express'
 import router from './routes/router.js';
 import { databasePool } from './config/config.js';
+import cores from 'cors'
 
 
 const app = express();
 app.use(express.json())
+app.use(cores())
 
 app.use('/api',router)
 
@@ -14,10 +16,10 @@ app.use('/api',router)
 const PORT = process.env.APP_PORT ;
 app.listen(PORT,async()=>{
 
-//    await databasePool.connect(function(err) {
-//         if (err) throw err;
-//         console.log("Connected!");
-//       });
+   await databasePool.connect(function(err) {
+        if (err) throw err;
+        console.log("Connected!");
+      });
     console.log(`port runing on port:${PORT}`);
     
 })
