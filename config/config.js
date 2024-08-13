@@ -9,6 +9,3 @@ export const db =   new Pool({
   })
 
 export const databasePool = db
- 
-
-
