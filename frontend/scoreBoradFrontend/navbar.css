@@ -1,0 +1,8 @@
+.live-dot{
+    width: 10px;
+    height: 10px;
+    background: red;
+    border: 1px solid rebeccapurple;
+    border-radius: 50%;
+    position: absolute;
+}

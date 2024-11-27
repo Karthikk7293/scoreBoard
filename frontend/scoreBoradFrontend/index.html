@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Cricket Score Board</title>
+  <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body class=" bg-light">
+
+  </script>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar shadow border navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand d-flex justify-content-center align-items-center  px-2 " href="#">
+              <img width="50" height="50"
+                src="https://t4.ftcdn.net/jpg/04/99/62/59/360_F_499625904_jhho0Ev0pAOuFntvY9HXGNQpFQqhBqyo.jpg" alt="">
+              <p class="my-auto fw-bold">LIVE
+                <div style="width: 10px; height: 10px;" class="spinner-grow text-danger mb-3" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Create Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Add Player</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="row my-4">
+      <div class="col-10 mx-auto mt-4 shadow rounded border pt-3">
+        <table class="table table-striped border table-hover table-bordered responsive  " id="data-table">
+          <thead class="p-2">
+            <tr>
+              <th>Match Id</th>
+              <th><img width="30px"
+                  src="https://t4.ftcdn.net/jpg/03/10/60/17/360_F_310601729_qiwUg48OztkDTVrTPJBIHVpUlXerujqb.jpg"
+                  alt="">Batting Team</th>
+              <th>Score</th>
+              <th>Wickets</th>
+              <th> <img width="20px" src="https://pngfre.com/wp-content/uploads/Cricket-14-1.png" alt="">Batsmen </th>
+              <th>Target</th>
+              <th>Run Rate</th>
+              <th>Overs</th>
+              <th><img width="20px" src="https://i.pinimg.com/736x/98/fe/3f/98fe3fc63b44fa12ed20de8b7ac85ff7.jpg"
+                  alt="">Bowler</th>
+              <th>Current Over Status</th>
+              <th> <img width="20px"
+                  src="https://png.pngtree.com/element_our/png/20190103/vector-setting-icon-png_309695.jpg"
+                  alt="">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <form id="myForm" class=" rounded p-3 pt-4">
+      <div class="row  ">
+        <div class="col-6 ">
+          <div class="row">
+            <div class="mb-3">
+              <p class="text-center h6 text-uppercase">Update Score Form</p>
+            </div>
+            <div class="col-6 ">
+              <div class="mb-3">
+                <label for="batting_team" class="form-label">Batting Team</label>
+                <input type="text" class="form-control" id="batting_team">
+                <input type="text" class="form-control d-none" id="batting_team_id">
+                <input type="text" class="form-control d-none" id="score_id">
+              </div>
+              <div class="mb-3">
+                <label for="score" class="form-label">Score</label>
+                <input type="text" class="form-control" id="score">
+              </div>
+              <div class="mb-3">
+                <label for="wickets" class="form-label">Wickets</label>
+                <input type="text" class="form-control" id="wickets">
+              </div>
+              <div class="mb-3">
+                <label for="batsmen" class="form-label">Batsmen</label>
+                <input type="text" class="form-control" id="batsmen">
+                <input type="text" class="form-control d-none" id="batsmen_id">
+              </div>
+              <div class="mb-3">
+                <label for="target" class="form-label">Target</label>
+                <input type="text" class="form-control" id="target">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="run_rate" class="form-label">Run Rate</label>
+                <input type="text" class="form-control" id="run_rate">
+              </div>
+              <div class="mb-3">
+                <label for="overs" class="form-label">Overs</label>
+                <input type="text" class="form-control" id="overs">
+              </div>
+              <div class="mb-3">
+                <label for="bowler_id" class="form-label">Bowler</label>
+                <input type="text" class="form-control" id="bowler">
+                <input type="text" class="form-control d-none" id="bowler_id">
+              </div>
+              <div class="mb-3">
+                <label for="current_over_status" class="form-label">Current Over Status</label>
+                <input type="text" class="form-control" id="current_over_status">
+              </div>
+            </div>
+            <div class=" d-flex justify-content-center ">
+              <button type="submit" class="btn btn-primary " value="update">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script type="module" src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
